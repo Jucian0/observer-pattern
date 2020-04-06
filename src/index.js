@@ -28,9 +28,9 @@ secondSubscriberBtn.addEventListener("click", e => {
 
 firstUnSubscriberBtn.addEventListener("click", e => {
   e.preventDefault();
-  Observable.unSubscribe(firstText);
+  Observable.unsubscribe(firstText);
 });
 secondUnSubscriberBtn.addEventListener("click", e => {
   e.preventDefault();
-  Observable.unSubscribe(secondtText);
+  Observable.unsubscribe(secondtText);
 });

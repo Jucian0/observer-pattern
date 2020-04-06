@@ -5,13 +5,12 @@ class Observable {
 
   subscribe(fn) {
     this.observers = [...this.observers, fn];
-
     return () => {
-      this.observers = this.observers.filter(observer => observer !== fn);
+      this.unsubscribe(fn);
     };
   }
 
-  unSubscribe(fn) {
+  unsubscribe(fn) {
     this.observers = this.observers.filter(observer => observer !== fn);
   }
 
